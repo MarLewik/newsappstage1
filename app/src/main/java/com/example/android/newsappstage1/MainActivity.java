@@ -5,28 +5,24 @@ import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
 import static com.example.android.newsappstage1.R.id.mainList;
 
 public class MainActivity extends AppCompatActivity implements LoaderCallbacks<ArrayList<News>> {
 
-
+    // Great Udacity reviewer You can try by this to check what app will show when api key will be wrong :)
+    //private static final String REQUEST_URL = "https://content.guardianapis.com/search?&api-key=ab41e155-346a-41c0-bda2-4e561e90991f&show-fields=thumbnail&show-tags=contributor";
     private static final String REQUEST_URL = "https://content.guardianapis.com/search?&api-key=6b41e155-346a-41c0-bda2-4e561e90991f&show-fields=thumbnail&show-tags=contributor";
     private static final int NEWS_ID = 1;
     private ImageView mEmptyStateTextView;

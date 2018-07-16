@@ -1,6 +1,7 @@
 package com.example.android.newsappstage1;
 
 import java.util.ArrayList;
+
 import android.content.Context;
 import android.content.AsyncTaskLoader;
 
@@ -23,7 +24,6 @@ public class NewsLoader extends AsyncTaskLoader<ArrayList<News>> {
         if (mUrl == null) {
             return null;
         }
-        //ArrayList<News> news = Query.fetchNewsdata(mUrl, getContext());
         ArrayList<News> news = (ArrayList<News>) QueryUtils.fetchNewsData(mUrl);
         return news;
     }
